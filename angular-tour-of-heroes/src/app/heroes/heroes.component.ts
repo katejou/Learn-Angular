@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
+import { Hero } from '../hero'; //引入 hero.ts
 
 @Component({
   selector: 'app-heroes',
@@ -9,9 +9,10 @@ import { Hero } from '../hero';
 export class HeroesComponent implements OnInit {
   
   // step 1
-  // hero = 'Windstorm'; 
+  // hero = 'Windstorm';
   
-  hero: Hero = {
+  // step 2
+  hero: Hero = { //才可以自由地使用它…
     id: 1,
     name: 'Windstorm'
   };
