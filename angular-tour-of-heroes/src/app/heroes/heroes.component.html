@@ -14,10 +14,36 @@
     Angular 發佈了一些內建管道，而且你還可以建立自己的管道。 -->
 
 <!-- step 4 Two-way binding -->
-<h2>{{hero.name | uppercase}} Details</h2>
+<!-- (The missing FormsModule) => app.module.ts -->
+
+<!-- <h2>{{hero.name | uppercase}} Details</h2>
 <div><span>id: </span>{{hero.id}}</div>
 <div>
   <label for="name">Hero name: </label>
   <input id="name" [(ngModel)]="hero.name" placeholder="name">
-</div>
-<!-- (The missing FormsModule) => app.module.ts -->
+</div> -->
+
+
+<!-- step 5 use Mock data and *ngFor -->
+<!-- <h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button type="button">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul> -->
+
+<!-- step 6 change of style ( look at -> heroes.component.ts ) -->
+
+<!-- step 7 onclick -->
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button type="button" (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
