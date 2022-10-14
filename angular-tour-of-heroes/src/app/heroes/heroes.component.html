@@ -51,13 +51,19 @@
   </li>
 </ul>
 <!-- step 8 *ngIf -->
-<div *ngIf="selectedHero">
+<!-- <div *ngIf="selectedHero">
   <h2>{{selectedHero.name | uppercase}} Details</h2>
   <div>id: {{selectedHero.id}}</div>
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
   </div>
-</div>
+</div> -->
 
 <!-- step 9 (look at step 7) class.selected attribute -->
+
+<!-- step 10 (cut step 8 to hero-detail.component.html) and link to it-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- 這個值，會在按下按鈕時，傳入 app-hero-detail ，然後會出現在這一頁的下方-->
+<!-- hero-detail.component收值的方法，要見hero-detail.component.ts -->
+
