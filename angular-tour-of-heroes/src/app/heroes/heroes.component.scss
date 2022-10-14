@@ -1,56 +1,67 @@
-/* Application-wide Styles */
+/* HeroesComponent's private CSS styles */
 
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
+.heroes {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
 
-h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-}
+  li {
+    display: flex;
+  }
 
-body {
-  margin: 2em;
-  color: #333;
-  font-family: Cambria, Georgia, serif;
-}
+  button {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: stretch;
+    height: 3em;
 
-input[type="text"] {
-  color: #333;
-  font-family: Cambria, Georgia, serif;
-}
+    &:hover {
+      color: white;
+      background-color: #c160fa;
+      left: .1em;
+    }
 
-button {
-  color: #333;
-  font-family: Cambria, Georgia, serif;
-  background-color: #eee;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  color: black;
-  font-size: 1.2rem;
-  padding: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+    &:active {
+      background-color: #525252;
+      color: #fafafa;
+    }
 
-  &:hover {
-    background-color: rgb(162, 125, 227);
+    &.selected {
+      background-color: black;
+      color: white;
+
+      &:hover {
+        background-color: #c160fa;
+        color: white;
+      }
+
+      &:active {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: small;
     color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #278efc;
+    line-height: 1em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
   }
 
-  &:disabled {
-    background-color: #eee;
-    color: #aaa;
-    cursor: auto;
+  .name {
+    align-self: center;
   }
-}
-
-/* everywhere else */
-
-* {
-  font-family: Arial, Helvetica, sans-serif;
 }
