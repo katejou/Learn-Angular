@@ -48,10 +48,11 @@ export class HeroesComponent implements OnInit {
     this.getHeroes(); // 有 3 才有 4
   }
 
-  selectedHero?: Hero; //設定有這個變數，但是不要為它賦值
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;//等有人按下按鈕時，才賦值。
-  }
+  // step 14 routing 之後，省略了這個方法
+  // selectedHero?: Hero; //設定有這個變數，但是不要為它賦值
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;//等有人按下按鈕時，才賦值。
+  // }
 
 
 }

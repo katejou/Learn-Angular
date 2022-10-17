@@ -41,13 +41,22 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
-    <button  [class.selected]="hero === selectedHero" 
+
+      <!-- <button  [class.selected]="hero === selectedHero" 
              type="button" 
              (click)="onSelect(hero)"
-    >
+      > 
       <span class="badge">{{hero.id}}</span>
       <span class="name">{{hero.name}}</span>
-    </button>
+
+      </button>
+      -->
+      
+      <!-- 進入 routing 後，不用 button 改為 a -->
+      <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+
   </li>
 </ul>
 <!-- step 8 *ngIf -->
@@ -62,8 +71,9 @@
 
 <!-- step 9 (look at step 7) class.selected attribute -->
 
+<!-- step 14 時，封鎖這段，因改用 routing 來跳到 detail 頁 -->
 <!-- step 10 (cut step 8 to hero-detail.component.html) and link to it-->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
 <!-- 這個值，會在按下按鈕時，傳入 app-hero-detail ，然後會出現在這一頁的下方-->
 <!-- hero-detail.component收值的方法，要見hero-detail.component.ts -->
 
@@ -79,3 +89,5 @@
 <!-- MessageService 中，有訊息的處理方法(Add Clear)。 -->
 <!-- 在 HeroService 引入和操作 MessageService -->
 <!-- Message component 中，引用 Message service，作顯示和使用者操作 -->
+
+<!-- step 14 Routing 和分頁 -->

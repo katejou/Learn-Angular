@@ -1,5 +1,13 @@
 <h1>{{title}}</h1>
 <!-- html 引用一個 app > app 引用一個 interface (我稱呼它為object) -->
-<app-heroes></app-heroes>
+
+<!-- <app-heroes></app-heroes> -->
+<!-- step 14 replace upper to lower -->
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+
 <!-- step 13 -->
 <app-messages></app-messages>

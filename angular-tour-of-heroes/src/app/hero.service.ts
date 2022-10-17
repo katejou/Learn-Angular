@@ -28,6 +28,16 @@ export class HeroService {
     this.messageService.add('HeroService: fetched heroes'); // step 13 !!
     return heroes;
   }
+  
+  //step 14 被 hero-detail 引用的方法。( 以 編號 來尋找資料庫 )
+  getHero(id: number): Observable<Hero> { //非同步的回傳物件
 
+    const hero = HEROES.find(h => h.id === id)!; //Linq 來篩選資料來源
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(hero); //非同步的回傳
+
+    // For now, assume that a hero with the specified `id` always exists.
+    // Error handling will be added in the next step of the tutorial.
+  }
 }
 
