@@ -1,0 +1,8 @@
+<div *ngIf="messageService.messages.length">
+<!-- 如果這個引入的「物件的串列的長度」不是零的話… -->
+  <h2>Messages</h2>
+  <button type="button" class="clear"
+          (click)="messageService.clear()">Clear messages</button>
+  <div *ngFor='let message of messageService.messages'> {{message}} </div>
+
+</div>
