@@ -133,12 +133,25 @@ export class HeroService {
       catchError(this.handleError<Hero>('deleteHero'))
     );
   }
-  //呼叫 HttpClient.delete()
-  //雖然這個元件把刪除英雄的邏輯委託給了 HeroService，
-  //但仍保留了更新它自己的英雄列表的職責。
-  //元件的 delete() 方法會在 HeroService 對伺服器的操作成功之前，先從列表中移除要刪除的英雄。
+  // 呼叫 HttpClient.delete()
+  // 雖然這個元件把刪除英雄的邏輯委託給了 HeroService，
+  // 但仍保留了更新它自己的英雄列表的職責。
+  // 元件的 delete() 方法會在 HeroService 對伺服器的操作成功之前，先從列表中移除要刪除的英雄。
 
-
+  //Step 16
+  /* GET heroes whose name contains search term */
+  searchHeroes(term: string): Observable<Hero[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`).pipe(
+      tap(x => x.length ?// x 是 get 回來的資料
+        this.log(`found heroes matching "${term}"`) :
+        this.log(`no heroes matching "${term}"`)),
+      catchError(this.handleError<Hero[]>('searchHeroes', []))
+    );
+  }
 
 }
 

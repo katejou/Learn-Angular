@@ -13,15 +13,17 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
 import { HttpClientModule } from '@angular/common/http'; 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
+    HeroSearchComponent,
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent //<-- 這個是用CLI指令產生heroes時，自動加進來的！
-    
+    DashboardComponent,
+    //這些是用CLI指令產生heroes時，自動加進來的！但注意說…先後的次序有差別！    
   ],
   imports: [
     HttpClientModule,// step 15
