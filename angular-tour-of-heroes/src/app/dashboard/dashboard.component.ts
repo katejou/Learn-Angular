@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void { 
     this.heroService.getHeroes() //方法引用
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5)); //增加條件！
+      .subscribe(heroes => this.heroes = heroes.slice(heroes.length-3, heroes.length)); //增加條件！
     //會擷取第 2 到 第 5 位英雄
   }
 

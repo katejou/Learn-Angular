@@ -9,6 +9,11 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here (step 4 Two-way binding)
 
+// Step 15 http service
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +21,27 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent //<-- 這個是用CLI指令產生heroes時，自動加進來的！
+    
   ],
   imports: [
+    HttpClientModule,// step 15
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    ),
+    
     BrowserModule,
     FormsModule,  // <-- (step 4 Two-way binding)
     AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
+  
 export class AppModule { }
+
+
+

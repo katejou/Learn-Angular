@@ -44,4 +44,11 @@ export class HeroDetailComponent implements OnInit {
     this.location.back(); // 使用了location，這東東是用來記錄使用者點擊的歷史？
   }
 
+  save(): void {
+  if (this.hero) {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
+  }
+
 }

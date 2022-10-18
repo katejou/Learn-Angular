@@ -57,6 +57,9 @@
       <span class="badge">{{hero.id}}</span> {{hero.name}}
       </a>
 
+      <button type="button" class="delete" title="delete hero"
+       (click)="delete(hero)">x</button>
+
   </li>
 </ul>
 <!-- step 8 *ngIf -->
@@ -91,3 +94,17 @@
 <!-- Message component 中，引用 Message service，作顯示和使用者操作 -->
 
 <!-- step 14 Routing 和分頁 -->
+
+<!-- step 15 Http Service -->
+<!-- 建立一個假的 Http的Web API 來提供資料 (模擬資料庫的伺服器和這個專案進行交流) -->
+
+<!-- 15.5 增刪修改… -->
+<div>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add hero
+  </button>
+</div>
