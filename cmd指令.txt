@@ -7,3 +7,15 @@ ng generate service hero
 ng generate component messages
 ng generate service messages
 
+ng generate module app-routing --flat --module=app
+// --flat : 把這個檔案放進了 src/app 中，而不是單獨的目錄中。
+// --module=app : 告訴 CLI 把它註冊到 AppModule 的 imports 陣列中。
+// A merge conflicted on path "/src/app/app-routing.module.ts".
+// 好像是原本就有這個檔案，我前往去加了一兩句，改動不大。
+
+ng generate component dashboard
+npm install angular-in-memory-web-api --save
+ng generate service InMemoryData
+ng generate component hero-search
+
+

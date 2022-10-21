@@ -1,0 +1,14 @@
+
+*ngIf是如果isPresidentElect控制的
+
+isPresidentElect預設是false，
+
+那個區段一開始沒有生出來。
+
+所以當this.applyBornDate2.yearRange拿回來，
+
+前端又還沒有改好。
+於是變成沒有地方放。
+
+故isPresidentElect要預設是true，
+要收起來的話，再改為false！
