@@ -1,1 +1,11 @@
-<p>step13 works!</p>
+<h2>Routing</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+
+    <!-- 進入 routing 後，不用 button 改為 a -->
+    <a routerLink="/detail/{{hero.id}}">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+        
+  </li>
+</ul>

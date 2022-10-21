@@ -16,7 +16,7 @@ import { Step9Component } from './step9/step9.component';
 import { Step10Component } from './step10/step10.component';
 import { Step11Component } from './step11/step11.component';
 import { Step12Component } from './step12/step12.component';
-
+import { Step13Component } from './step13/step13.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/step1', pathMatch: 'full' }, //一開始空的，預設轉到step1
@@ -32,6 +32,7 @@ const routes: Routes = [
   { path: 'step10', component: Step10Component },
   { path: 'step11', component: Step11Component },
   { path: 'step12', component: Step12Component },
+  { path: 'step13', component: Step13Component },
   { path: 'detail/:id', component: HeroDetailComponent },//path 中的冒號（:）表示 :id 是一個佔位符
   { path: 'dashboard', component: DashboardComponent },
   { path: 'heroes', component: HeroesComponent } //加這行
