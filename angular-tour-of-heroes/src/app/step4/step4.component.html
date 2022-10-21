@@ -1,0 +1,10 @@
+<!-- step 4 Two-way binding -->
+<!-- (The missing FormsModule) => app.module.ts -->
+<!-- 未加入 FormsModule 未加入 app.module.ts 之前， h2 之中的內容不會隨input而變-->
+
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div>
+  <label for="name">Hero name: </label>
+  <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>
