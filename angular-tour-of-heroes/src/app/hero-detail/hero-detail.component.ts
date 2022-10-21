@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core'; //加入 Input
 
 import { Hero } from '../hero';
 
-// 現在是路由後的獨立頁
+// step 13
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { HeroService } from '../service/hero.service'; 
@@ -45,6 +45,7 @@ export class HeroDetailComponent implements OnInit {
     this.location.back(); // 使用了location，這東東是用來記錄使用者點擊的歷史？
   }
 
+  // step 14
   save(): void {
   if (this.hero) {
     this.heroService.updateHero(this.hero)

@@ -24,7 +24,23 @@ export class Step13Component implements OnInit {
   //13.5 請觀看 dashborad
   //13.6 什麼的自動導航︰app-routing.module 中 { path: '', redirectTo: '/step1', pathMatch: 'full' },
 
-  //13.7 請觀看 hero-detail是如何接收 url 上給的參數，再從資料庫中取資料…
+  //13.7 hero-detail是如何接收 url 上給的參數
+  //13.7.1 app-routing.module 中 { path: 'detail/:id' ....
+  //13.7.2 路由連結送出id <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">xxx<a>
+  //13.7.3 step13 的 html 上，也把 button 替換為 a
+  //13.7.4 step13 的 ts 刪 onselect 方法
+
+  //13.8 hero-detail是如何用參數來抓資料
+  //13.8.1 import ActivatedRoute  Location  HeroService
+  //13.8.2 constructor 要 init 出它們來
+
+  //ActivatedRoute 儲存著路由資訊
+  //HeroService 從遠端伺服器獲取英雄資料
+  //location 是一個 Angular 的服務，用來與瀏覽器打交道。 稍後，你就會使用它來導航回上一個檢視。
+  //詳細做法，見hero-detail
+
+  //13.9 HeroService 新增抓單筆資料的方法 getHero(id: number): Observable<Hero>{...}
+  //13.10 回到上頁的按鈕和方法︰ this.location.back();
 
   heroes: Hero[] = [];
   constructor(private bigService: BigService ) {} 
