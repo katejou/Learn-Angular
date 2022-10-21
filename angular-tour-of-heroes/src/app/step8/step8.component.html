@@ -8,8 +8,8 @@
     <!-- 同樣效果的寫法︰[ngClass]="{'selected': atype === selectedType}" -->
 
     <button  [class.selected]="hero === selectedHero" 
-             type="button" 
-             (click)="onSelect(hero)"
+           type="button" 
+           (click)="onSelect(hero)"
     > 
     <span class="badge">{{hero.id}}</span>
     <span class="name">{{hero.name}}</span>
@@ -18,3 +18,12 @@
       
   </li>
 </ul>
+<!-- step 8 *ngIf -->
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div>id: {{selectedHero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+  </div>
+</div>

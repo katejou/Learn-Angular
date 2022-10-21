@@ -1,52 +1,18 @@
 
-<!-- step 6 change of style ( look at -> heroes.component.ts ) -->
-
-<!-- step 7 onclick -->
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
+        
+    <!-- 進入 routing 後，不用 button 改為 a -->
+    <a routerLink="/detail/{{hero.id}}">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
 
-    <!-- [class.selected] 是什麼︰ -->
-    <!-- if it results in true, then the selected css class will be applied to the element  -->
-    <!-- 同樣效果的寫法︰[ngClass]="{'selected': atype === selectedType}" -->
-
-      <!-- <button  [class.selected]="hero === selectedHero" 
-             type="button" 
-             (click)="onSelect(hero)"
-      > 
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
-
-      </button>
-      -->
-      
-      <!-- 進入 routing 後，不用 button 改為 a -->
-      <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-      </a>
-
-      <button type="button" class="delete" title="delete hero"
-       (click)="delete(hero)">x</button>
+    <button type="button" class="delete" title="delete hero"
+     (click)="delete(hero)">x</button>
 
   </li>
 </ul>
-<!-- step 8 *ngIf -->
-<!-- <div *ngIf="selectedHero">
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div>id: {{selectedHero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-  </div>
-</div> -->
-
-<!-- step 9 (look at step 7) class.selected attribute -->
-
-<!-- step 14 時，封鎖這段，因改用 routing 來跳到 detail 頁 -->
-<!-- step 10 子頁(cut step 8 to hero-detail.component.html) and link to it-->
-<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
-<!-- 這個值，會在按下按鈕時，傳入 app-hero-detail ，然後會出現在這一頁的下方-->
-<!-- hero-detail.component收值的方法，要見hero-detail.component.ts -->
 
 <!-- step 11 新增服務 Service 來專門存取資料-->
 <!-- 同步取資料 -->

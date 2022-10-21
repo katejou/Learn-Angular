@@ -21,6 +21,12 @@ import { Step4Component } from './step4/step4.component';
 import { Step5Component } from './step5/step5.component';
 import { Step6Component } from './step6/step6.component';
 import { Step7Component } from './step7/step7.component';
+import { Step8Component } from './step8/step8.component';
+import { LittleDetailComponent } from './little-detail/little-detail.component';
+import { Step9Component } from './step9/step9.component';
+import { Step10Component } from './step10/step10.component';
+import { Step11Component } from './step11/step11.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +43,12 @@ import { Step7Component } from './step7/step7.component';
     Step5Component,
     Step6Component,
     Step7Component,
-    //這些是用CLI指令產生heroes時，自動加進來的！但注意說…先後的次序有差別！    
+    Step8Component,
+    Step9Component,
+    Step10Component,
+    LittleDetailComponent,
+    Step11Component
+    //這些是用CLI指令產生Component時，自動加進來的！但注意說…先後的次序有差別！    
   ],
   imports: [
     HttpClientModule,// step 15

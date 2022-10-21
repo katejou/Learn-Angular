@@ -1,11 +1,12 @@
 // import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
 import { Component, OnInit, Input } from '@angular/core'; //加入 Input
 
-// 現在已經不是子元素，改成路由後的獨立頁了。
+import { Hero } from '../hero';
+
+// 現在是路由後的獨立頁
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { HeroService } from '../hero.service'; 
+import { HeroService } from '../service/hero.service'; 
 
 @Component({
   selector: 'app-hero-detail',
