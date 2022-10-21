@@ -1,0 +1,20 @@
+<!-- step 7 onclick -->
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+
+    <!-- [class.selected] 是什麼︰ -->
+    <!-- if it results in true, then the selected css class will be applied to the element  -->
+    <!-- 同樣效果的寫法︰[ngClass]="{'selected': atype === selectedType}" -->
+
+    <button  [class.selected]="hero === selectedHero" 
+           type="button" 
+           (click)="onSelect(hero)"
+    > 
+    <span class="badge">{{hero.id}}</span>
+    <span class="name">{{hero.name}}</span>
+    </button>
+     
+      
+  </li>
+</ul>

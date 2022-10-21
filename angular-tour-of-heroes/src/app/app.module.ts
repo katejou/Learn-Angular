@@ -20,6 +20,7 @@ import { Step3Component } from './step3/step3.component';
 import { Step4Component } from './step4/step4.component';
 import { Step5Component } from './step5/step5.component';
 import { Step6Component } from './step6/step6.component';
+import { Step7Component } from './step7/step7.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { Step6Component } from './step6/step6.component';
     Step4Component,
     Step5Component,
     Step6Component,
+    Step7Component,
     //這些是用CLI指令產生heroes時，自動加進來的！但注意說…先後的次序有差別！    
   ],
   imports: [
