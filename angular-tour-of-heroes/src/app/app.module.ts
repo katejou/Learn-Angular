@@ -12,8 +12,9 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
 // Step 15 http service
 import { HttpClientModule } from '@angular/common/http'; 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './service/in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+
 import { Step1Component } from './step1/step1.component';
 import { Step2Component } from './step2/step2.component';
 import { Step3Component } from './step3/step3.component';
@@ -26,6 +27,8 @@ import { LittleDetailComponent } from './little-detail/little-detail.component';
 import { Step9Component } from './step9/step9.component';
 import { Step10Component } from './step10/step10.component';
 import { Step11Component } from './step11/step11.component';
+import { Step12Component } from './step12/step12.component';
+import { Step13Component } from './step13/step13.component';
 
 
 @NgModule({
@@ -47,7 +50,9 @@ import { Step11Component } from './step11/step11.component';
     Step9Component,
     Step10Component,
     LittleDetailComponent,
-    Step11Component
+    Step11Component,
+    Step12Component,
+    Step13Component,
     //這些是用CLI指令產生Component時，自動加進來的！但注意說…先後的次序有差別！    
   ],
   imports: [

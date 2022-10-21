@@ -9,7 +9,7 @@ import { Hero } from '../hero';
 })
 export class Step10Component implements OnInit {
 
-    // step 10 (1)
+  // step 10 (1)
   heroes: Hero[] = [];//一開始是空串列
 
   constructor(private smallService: SmallService ) {} // step 10 (2)

@@ -10,17 +10,11 @@ import { MessageService } from '../service/message.service'; //step 13
  })
 export class HeroesComponent implements OnInit {
   
-
   // step 11 (1)
   heroes: Hero[] = [];//一開始是空串列
 
   //constructor() { } // 原生，改為一進入就引進 HeroService 的實體
   constructor(private heroService: HeroService ,private messageService: MessageService) {} // step 11 (2) + step 13
-
-  // step 11 (3) 在類別中，增加方法。
-  // getHeroes(): void {
-  //   this.heroes = this.heroService.getHeroes(); //有 1, 2 才有 3
-  // }
 
   // step 12 Observable
   getHeroes(): void {

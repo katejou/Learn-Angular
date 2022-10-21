@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Hero } from './hero';
+import { Hero } from '../hero';
 //step 12
 import { Observable, of } from 'rxjs';
 //step 13 一個 service 加進去另外一個 service
@@ -22,13 +22,6 @@ export class HeroService {
   //constructor() { }
   //constructor(private messageService: MessageService) { }
   // 這是一個典型的“服務中的服務”場景：你把 MessageService 注入到了 HeroService 中，而 HeroService 又被注入到了 HeroesComponent 中。
-
-  //step 12 ()
-  // getHeroes(): Observable<Hero[]> {
-  //   const heroes = of(HEROES); // Observable of 會等待並觀察
-  //   this.messageService.add('HeroService: fetched heroes'); // step 13 !!
-  //   return heroes;
-  // }
 
   // step 15 封上，被下方取代
   private heroesUrl = 'api/heroes';  // URL to web api
