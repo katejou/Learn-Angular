@@ -9,10 +9,12 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here (step 4 Two-way binding)
 
-// Step 15 http service
+// Step 14 http service
 import { HttpClientModule } from '@angular/common/http'; 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './service/in-memory-data.service';
+
+// Step 15
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 import { Step1Component } from './step1/step1.component';
@@ -31,6 +33,7 @@ import { Step12Component } from './step12/step12.component';
 import { Step13Component } from './step13/step13.component';
 import { SmallDetailComponent } from './small-detail/small-detail.component';
 import { Step14Component } from './step14/step14.component';
+import { LargeDetailComponent } from './large-detail/large-detail.component';
 
 
 @NgModule({
@@ -57,10 +60,13 @@ import { Step14Component } from './step14/step14.component';
     Step13Component,
     SmallDetailComponent,
     Step14Component,
+    LargeDetailComponent
     //這些是用CLI指令產生Component時，自動加進來的！但注意說…先後的次序有差別！    
   ],
   imports: [
-    HttpClientModule,// step 15
+
+    // step 14
+    HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

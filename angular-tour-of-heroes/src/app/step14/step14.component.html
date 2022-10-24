@@ -1,1 +1,37 @@
-<p>step14 works!</p>
+
+<h2>WebAPI</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+        
+    <!-- 進入 routing 後，不用 button 改為 a -->
+    <a routerLink="/large-detail/{{hero.id}}">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+
+    <!-- 14.5 增「刪」修改… -->
+    <button type="button" class="delete" title="delete hero"
+     (click)="delete(hero)">x</button>
+
+  </li>
+</ul>
+
+
+<!-- step 14 Http Service -->
+<!-- 建立一個假的 Http的Web API 來提供資料 (模擬資料庫的伺服器和這個專案進行交流) -->
+
+<!-- 14.5 「增」刪修改… -->
+<div>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add hero
+  </button>
+</div>
+
+<!-- Step 15 根據名字搜尋 -->
+<!-- 在最後一次練習中，你要學到把 Observable 的運算子串在一起，
+     讓你能將相似 HTTP 請求的數量最小化，並節省網路頻寬。 
+     當用戶在dashboard搜尋框中輸入名字時，會不斷過濾英雄的 HTTP 請求。
+     目標是僅僅發出儘可能少的必要請求。-->
