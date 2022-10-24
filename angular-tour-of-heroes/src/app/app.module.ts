@@ -29,6 +29,8 @@ import { Step10Component } from './step10/step10.component';
 import { Step11Component } from './step11/step11.component';
 import { Step12Component } from './step12/step12.component';
 import { Step13Component } from './step13/step13.component';
+import { SmallDetailComponent } from './small-detail/small-detail.component';
+import { Step14Component } from './step14/step14.component';
 
 
 @NgModule({
@@ -53,6 +55,8 @@ import { Step13Component } from './step13/step13.component';
     Step11Component,
     Step12Component,
     Step13Component,
+    SmallDetailComponent,
+    Step14Component,
     //這些是用CLI指令產生Component時，自動加進來的！但注意說…先後的次序有差別！    
   ],
   imports: [
