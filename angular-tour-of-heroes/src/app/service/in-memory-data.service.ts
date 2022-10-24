@@ -19,8 +19,8 @@ import { Hero } from '../hero';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const heroes = [ // 這個名稱，是網址的一部分
-      { id: 12, name: 'Dr. Nice' },
+    const heroes = [ // 這個名稱，是api網址的一部分(在service的地方，會被用到)
+      { id: 12, name: 'Dr. Nice' }, // id 和 name 也是 api網址的/參數部分
       { id: 13, name: 'Bombasto' },
       { id: 14, name: 'Celeritas' },
       { id: 15, name: 'Magneta' },

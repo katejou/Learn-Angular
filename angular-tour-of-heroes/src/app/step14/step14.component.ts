@@ -64,8 +64,9 @@ export class Step14Component implements OnInit {
 
   //刪
   delete(hero: Hero): void {
-  this.heroes = this.heroes.filter(h => h !== hero);
-  this.largeService.deleteHero(hero.id).subscribe();
+    this.heroes = this.heroes.filter(h => h !== hero);
+    //  元件的 delete() 方法會在 largeService 對伺服器的操作成功之前，先從列表中移除要刪除的英雄。
+    this.largeService.deleteHero(hero.id).subscribe(); //因為這個service是假的，所以不會成功啦…
   }
 
   //修改的功能在 LargeDetail！

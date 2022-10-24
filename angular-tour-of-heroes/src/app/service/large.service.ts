@@ -151,5 +151,7 @@ export class LargeService {
       catchError(this.handleError<Hero>('large deleteHero'))
     );
   }
+  // 元件的 delete() 方法會在 largeService 對伺服器的操作成功之前，先從列表中移除要刪除的英雄。
+
   
 }

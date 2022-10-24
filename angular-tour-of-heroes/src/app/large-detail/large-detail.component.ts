@@ -48,10 +48,10 @@ export class LargeDetailComponent implements OnInit {
 
   // step 14
   save(): void {
-  if (this.hero) {
-    this.largeService.updateHero(this.hero)
-      .subscribe(() => this.goBack());
-  }
+    if (this.hero) {
+      this.largeService.updateHero(this.hero)
+        .subscribe(() => this.goBack());
+    }
   }
 
 }

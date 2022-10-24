@@ -4,6 +4,7 @@
  
   <ul class="search-result">
     <li *ngFor="let hero of heroes$ | async" >
+      <!--  -->
       <a routerLink="/detail/{{hero.id}}">
         {{hero.name}}
       </a>
@@ -11,7 +12,9 @@
   </ul>
 </div>
 
-<!-- *ngFor 會重複渲染這些英雄物件。
+<!-- 
+  
+  *ngFor 會重複渲染這些英雄物件。
     注意，*ngFor 在一個名叫 heroes$ 的列表上迭代，而不是 heroes。
     $ 是一個約定，
     表示 heroes$ 是一個 Observable 而不是陣列 !! 
@@ -19,7 +22,7 @@
     由於 *ngFor 不能直接使用 Observable，
     所以要使用一個管道字元（|），後面緊跟著一個 async。
     這表示 Angular 的 AsyncPipe 管道，
-    它會自動訂閱 Observable，這樣你就不用在元件類別中這麼做了。
+    它會自動訂閱 Observable，這樣你就不用在元件類別(.ts)中這麼做了。
     
 -->
 
