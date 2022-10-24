@@ -9,7 +9,7 @@ import { Location } from '@angular/common';
 import { HeroService } from '../service/hero.service'; 
 
 @Component({
-  selector: 'app-hero-detail',
+  selector: 'app-hero-detail', // <-- 這個是可以用來作子頁去呼叫的名稱！
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.scss']
 })

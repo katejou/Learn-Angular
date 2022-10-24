@@ -34,6 +34,7 @@ import { Step13Component } from './step13/step13.component';
 import { SmallDetailComponent } from './small-detail/small-detail.component';
 import { Step14Component } from './step14/step14.component';
 import { LargeDetailComponent } from './large-detail/large-detail.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { LargeDetailComponent } from './large-detail/large-detail.component';
     Step13Component,
     SmallDetailComponent,
     Step14Component,
-    LargeDetailComponent
+    LargeDetailComponent,
+    HeroFormComponent
     //這些是用CLI指令產生Component時，自動加進來的！但注意說…先後的次序有差別！    
   ],
   imports: [
