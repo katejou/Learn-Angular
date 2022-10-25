@@ -20,6 +20,8 @@ import { Step13Component } from './step13/step13.component';
 import { Step14Component } from './step14/step14.component';
 import { SmallDetailComponent } from './small-detail/small-detail.component';
 import { LargeDetailComponent } from './large-detail/large-detail.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/step1', pathMatch: 'full' }, //一開始空的，預設轉到step1
@@ -41,7 +43,8 @@ const routes: Routes = [
   { path: 'large-detail/:id', component: LargeDetailComponent },
   { path: 'detail/:id', component: HeroDetailComponent },//path 中的冒號（:）表示 :id 是一個佔位符
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'heroes', component: HeroesComponent } //加這行
+  { path: 'heroes', component: HeroesComponent },
+  { path: 'heroform', component: HeroFormComponent }
     
 ];
 

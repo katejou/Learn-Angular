@@ -1,7 +1,7 @@
 // 這裡用 class 隔壁用 interface ，
 // 兩個東東原本同名，所以 export 會搞不清楚，必須要分開。 
 
-export class Hero4form { 
+export class Heroform { 
 
   constructor(
     public id: number,

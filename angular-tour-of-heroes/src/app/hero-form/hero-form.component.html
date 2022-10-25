@@ -1,1 +1,46 @@
-<p>hero-form works!</p>
+<!-- app.module.ts 裡 import 了就可以用 -->
+<form #heroForm="ngForm">
+
+    <!-- 透過表單頂部的診斷行可以確認所有的更改都已反映在模型中。 
+    {{ model | json }}
+    -->
+
+    <div class="form-group">
+        <label for="name">Hero Name</label>
+        <!-- 每個 <input> 元素都有一個 id 屬性。<label> 元素的 for 屬性用它來把標籤匹配到輸入控制元件。 -->
+        <input type="text" class="form-control" id="name"
+            required
+            [(ngModel)]="model.name" name="name" 
+            #name="ngModel"> <!-- 這個是為了給下方的錯誤訊息div來綁定！-->
+        <div [hidden]="name.valid || name.pristine" 
+            class="alert alert-danger">
+            <!--  原始表示該使用者在此表單中顯示的值尚未更改過。如果你忽略了 pristine 狀態，那麼只有當值有效時才會隱藏這些訊息。 -->
+        Name is required
+        </div>
+
+        <!-- 這個東東，只是用來看看 ngModel 有沒有把值雙向地繫結上︰
+            <p>TODO: remove this: {{model.name}}</p> 
+        -->
+        <!-- 
+            在元素上使用 [(ngModel)] 時，必須為該元素定義一個 name 屬性。
+            Angular 會用這個指定的名字來把這個元素註冊到父 <form> 元素上的 NgForm 指令中。
+         -->
+    </div>
+
+    <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text"  class="form-control" id="alterEgo"
+                [(ngModel)]="model.alterEgo" name="alterEgo">
+    </div>
+
+    <div class="form-group">
+        <label for="power">Hero Power</label>
+        <select class="form-control"  id="power"
+                required
+                [(ngModel)]="model.power" name="power">
+            <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        </select>
+    </div>
+
+</form>
+
