@@ -7,19 +7,18 @@ import { Heroform } from '../heroform';
   templateUrl: './hero-form.component.html',
   styleUrls: ['./hero-form.component.scss']
 })
+  
+// https://angular.tw/guide/forms
 export class HeroFormComponent {
+
+  constructor() { }
 
   powers = ['','Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
-
   model = new Heroform(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
 
   submitted = false;
   onSubmit() { this.submitted = true; }
-
-  // https://angular.tw/guide/forms
-
-  constructor() { }
 
   ngOnInit(): void {
 
@@ -29,6 +28,12 @@ export class HeroFormComponent {
     console.log('My hero is called ' + myHero.name); // "My hero is called SkyDog"
     
   }
+
+  newHero() {
+    this.model = new Heroform(42, '', '');
+  }
+
+
 
   //app.module.ts
   //import { FormsModule } from '@angular/forms';
@@ -54,6 +59,13 @@ export class HeroFormComponent {
   在初始時，input 用 F12 來看會長這樣︰
   <input … class="form-control ng-untouched ng-pristine ng-valid" …>
 
+  ...
+  驗証用的視覺效果都在 html 和 scss
+
   */
   
+
+  // 使用 ngSubmit 提交表單
+
+
 }
