@@ -1,4 +1,4 @@
 # LearnAngular
-我用官網上的實作來一步步學習Angular。(已完成基礎練習。暫告一段落。)
+I implemented the lessons on the official website to learn Angular step by step.
 
-來源︰https://angular.tw/tutorial/toh-pt0
+Source︰https://angular.tw/tutorial/toh-pt0
